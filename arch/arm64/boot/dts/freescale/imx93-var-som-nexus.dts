@@ -462,11 +462,11 @@
 		wakeup-source;
 	};
 
-	/* DS1337 RTC module */
+	/* PCF85363 RTC module */
 	rtc@68 {
 		status = "okay";
-		compatible = "dallas,ds1337";
-		reg = <0x68>;
+		compatible = "nxp,pcf85363";
+		reg = <0x51>;
 	};
 };
 
