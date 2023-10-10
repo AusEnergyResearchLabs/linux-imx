@@ -9,7 +9,7 @@
 #include "imx93-var-som.dtsi"
 
 / {
-	model = "Variscite VAR-SOM-MX93 on Symphony-Board";
+	model = "Variscite VAR-SOM-MX93 on Nexus Board";
 
 	aliases {
 		gpio4 = &pca9534;
