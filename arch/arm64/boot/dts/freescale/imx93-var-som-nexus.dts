@@ -516,10 +516,10 @@
 	status = "okay";
 };
 
-/* Console */
-&lpuart2 {
+/* RS485 */
+&lpuart3 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_uart2>;
+	pinctrl-0 = <&pinctrl_uart3>;
 	linux,rs485-enabled-at-boot-time;
 	status = "okay";
 };
