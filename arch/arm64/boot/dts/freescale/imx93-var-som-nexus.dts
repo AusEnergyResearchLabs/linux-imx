@@ -460,6 +460,23 @@
 		compatible = "nxp,pcf85363";
 		reg = <0x51>;
 	};
+
+    /* USB Type-C Controller */
+	typec@47 {
+		compatible = "ti,tusb320l";
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinctrl_extcon>;
+		reg = <0x60>;
+		interrupt-parent = <&gpio1>;
+		interrupts = <10 IRQ_TYPE_NONE>;
+		irq-is-id-quirk;
+
+		port {
+			typec1_dr_sw: endpoint {
+				remote-endpoint = <&usb1_drd_sw>;
+			};
+		};
+	};
 };
 
 &lpi2c5 {
@@ -485,24 +502,6 @@
 		interrupts = <26 IRQ_TYPE_EDGE_FALLING>;
 		#gpio-cells = <2>;
 		wakeup-source;
-	};
-
-	/* USB Type-C Controller */
-	typec@3d {
-		compatible = "nxp,ptn5150";
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_extcon>;
-		reg = <0x3d>;
-		interrupt-parent = <&gpio1>;
-		interrupts = <10 IRQ_TYPE_NONE>;
-		irq-is-id-quirk;
-		status ="okay";
-
-		port {
-			typec1_dr_sw: endpoint {
-				remote-endpoint = <&usb1_drd_sw>;
-			};
-		};
 	};
 };
 
