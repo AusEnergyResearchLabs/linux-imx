@@ -269,15 +269,6 @@
 	status = "okay";
 };
 
-&gpio2 {
-	cam_buf_hog {
-		gpio-hog;
-		gpios = <17 0>;
-		output-low;
-		line-name = "cam_buf_dis";
-	};
-};
-
 &iomuxc {
 	pinctrl_captouch: captouchgrp {
 		fsl,pins = <
