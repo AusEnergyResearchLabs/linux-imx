@@ -515,7 +515,7 @@
 &lpuart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart3>, <&pinctrl_uart3_rs485>;
-	rts-gpios = <&gpio2 2 GPIO_ACTIVE_LOW>
+	rts-gpios = <&gpio2 2 GPIO_ACTIVE_LOW>;
 	linux,rs485-enabled-at-boot-time;
 	status = "okay";
 };
