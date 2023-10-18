@@ -46,7 +46,7 @@
 
 		menu {
 			label = "Menu";
-			gpios = <&pca9534 3 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_MENU>;
 			wakeup-source;
 		};
