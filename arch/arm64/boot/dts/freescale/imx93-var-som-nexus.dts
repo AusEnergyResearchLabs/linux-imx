@@ -220,6 +220,7 @@
 	status = "okay";
 };
 
+/* Ethernet Quality-of-Service */
 &eqos {
 	mdio {
 		ethphy1: ethernet-phy@5 {
@@ -241,6 +242,7 @@
 	};
 };
 
+/* Fast Ethernet Controller */
 &fec {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_fec>;
