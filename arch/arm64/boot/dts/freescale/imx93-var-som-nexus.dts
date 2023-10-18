@@ -356,6 +356,12 @@
 		>;
 	};
 
+	pinctrl_uart3_rs485: uart3rs485 {
+		fsl,pins = <
+			MX93_PAD_GPIO_IO02__GPIO2_IO02		0x31e
+		>;
+	};
+
 	pinctrl_uart6: uart6grp {
 		fsl,pins = <
 			MX93_PAD_GPIO_IO05__LPUART6_RX			0x31e
@@ -508,7 +514,8 @@
 /* RS485 */
 &lpuart3 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_uart3>;
+	pinctrl-0 = <&pinctrl_uart3>, <&pinctrl_uart3_rs485>;
+	rts-gpios = <&gpio2 2 GPIO_ACTIVE_LOW>
 	linux,rs485-enabled-at-boot-time;
 	status = "okay";
 };
