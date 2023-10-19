@@ -14,11 +14,6 @@
 	compatible = "variscite,imx93-var-som", "fsl,imx93";
 	model = "Variscite VAR-SOM-MX93 on Nexus Board";
 
-	aliases {
-		ethernet0 = &eqos;
-		ethernet1 = &fec;
-	};
-
 	chosen {
 		stdout-path = &lpuart1;
 	};
