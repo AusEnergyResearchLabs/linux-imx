@@ -176,6 +176,7 @@
 	phy-handle = <&ethphy0>;
 	phy-supply = <&reg_eqos_phy>;
 	status = "okay";
+
 	mdio {
 		compatible = "snps,dwmac-mdio";
 		#address-cells = <1>;
