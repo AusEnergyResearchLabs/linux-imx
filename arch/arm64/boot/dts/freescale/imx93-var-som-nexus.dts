@@ -78,18 +78,11 @@
 		regulator-always-on;
 	};
 
-	/*
-	 * Needed only for Symphony <= v1.5
-	 */
 	reg_fec_phy: regulator-fec-phy {
 		compatible = "regulator-fixed";
 		regulator-name = "fec-phy";
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
-		regulator-enable-ramp-delay = <20000>;
-		gpio = <&pca9534 7 GPIO_ACTIVE_HIGH>;
-		enable-active-high;
-		regulator-always-on;
 	};
 
 	reg_usdhc2_vmmc: regulator-usdhc2 {
