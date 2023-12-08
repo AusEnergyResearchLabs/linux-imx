@@ -229,6 +229,14 @@
 	status = "okay";
 };
 
+&gpio1 {
+    digital_out_1 {
+        gpios = <&gpio1 15 GPIO_ACTIVE_HIGH>;
+        output-low;
+        line-name = "digital-out-1";
+    };
+};
+
 &gpio2 {
     relay_1 {
         gpios = <&gpio2 3 GPIO_ACTIVE_HIGH>;
@@ -241,7 +249,28 @@
         output-low;
         line-name = "relay-2";
     };
+
+    digital_in_1 {
+        gpios = <&gpio2 10 GPIO_ACTIVE_HIGH>;
+        input;
+        line-name = "digital-in-1";
+    };
 };
+
+&gpio3 {
+    digital_out_1 {
+        gpios = <&gpio3 18 GPIO_ACTIVE_HIGH>;
+        output-low;
+        line-name = "digital-out-2";
+    };
+
+    digital_in_2 {
+        gpios = <&gpio3 27 GPIO_ACTIVE_HIGH>;
+        input;
+        line-name = "digital-in-2";
+    };
+};
+
 
 &iomuxc {
     pinctrl_bt: btgrp {
