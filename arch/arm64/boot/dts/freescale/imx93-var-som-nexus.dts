@@ -229,6 +229,19 @@
 	status = "okay";
 };
 
+&gpio2 {
+    relay_1 {
+        gpios = <&gpio2 3 GPIO_ACTIVE_HIGH>;
+        output-low;
+        line-name = "relay-1";
+    }
+    relay_2 {
+        gpios = <&gpio2 1 GPIO_ACTIVE_HIGH>;
+        output-low;
+        line-name = "relay-2";
+    }
+}
+
 &iomuxc {
     pinctrl_bt: btgrp {
 		fsl,pins = <
