@@ -266,7 +266,8 @@
 			reg = <5>;
 			qca,disable-smarteee;
 			eee-broken-1000t;
-			reset-gpios = <&pca9534 5 GPIO_ACTIVE_LOW>;
+			// reset-gpios = <&pca9534 5 GPIO_ACTIVE_LOW>;
+			reset-gpios = <&gpio2 18 GPIO_ACTIVE_LOW>;
 			reset-assert-us = <10000>;
 			reset-deassert-us = <20000>;
 			vddio-supply = <&vddio1>;
